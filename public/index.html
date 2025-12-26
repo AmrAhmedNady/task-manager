@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Monitor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-layout">
+        <nav class="sidebar">
+            <div class="nav-title">System</div>
+            <div id="device-list" class="nav-list"></div>
+        </nav>
+        <main class="content-area">
+            <div id="temp-alert" class="alert-box hidden">
+                ⚠️ HIGH CPU TEMPERATURE DETECTED (>80°C)
+            </div>
+
+            <header class="dashboard-header">
+                <div class="header-titles">
+                    <h1 id="detail-title">CPU</h1>
+                    <span id="detail-subtitle" class="subtitle">...</span>
+                </div>
+                <div class="header-stats">
+                    <div class="stat-badge">
+                        <span id="detail-usage">0%</span>
+                    </div>
+                </div>
+            </header>
+            <div class="graph-card">
+                <div class="graph-info">
+                    <span>Usage History (60s)</span>
+                    <span>100%</span>
+                </div>
+                <div class="canvas-wrapper">
+                    <canvas id="main-graph"></canvas>
+                </div>
+            </div>
+            <div class="details-grid" id="stats-grid"></div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
